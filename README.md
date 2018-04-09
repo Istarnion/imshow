@@ -3,7 +3,11 @@
 An extremely simple tool for showing images.
 
 ## How to build
-Run `make`
+Run `make` for debug build
+
+Run `make install` to build a release build, and put it in `~/bin`
+
+Note that `~/bin` might not be in your PATH yet, or even exist, so take care of that first, or just run `make release` and put the executable whereever you want
 
 If I port to Windows, there will be a `build.bat` file you will have to run.
 

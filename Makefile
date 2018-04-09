@@ -5,11 +5,18 @@ APPNAME=imshow
 
 ifeq (${PLATFORM}, Darwin)
 debug:
-		clang -g -x objective-c -framework Cocoa src/platform_macos.m src/imshow.c -o ${APPNAME}
+		clang -g -Wall -x objective-c -framework Cocoa src/platform_macos.m src/imshow.c -o ${APPNAME}
+release:
+		clang -O3 -x objective-c -framework Cocoa src/platform_macos.m src/imshow.c -o ${APPNAME}
 else
 debug:
-		gcc -g src/platform_linux.c imshow.c -o ${APPNAME}
+		gcc -g -Wall src/platform_x.c imshow.c -o ${APPNAME}
+release:
+		gcc -O3 src/platform_x.c imshow.c -o ${APPNAME}
 endif
 
-install: debug
+
+
+install: release
 	mv imshow ~/bin/imshow
+
