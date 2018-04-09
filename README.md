@@ -2,6 +2,11 @@
 
 An extremely simple tool for showing images.
 
+## How to build
+Run `make`
+
+If I port to Windows, there will be a `build.bat` file you will have to run.
+
 ## Motivation and goals
 I work from the command line a lot, and I often want to look at image files without opening Finder, finding the files, and opening them in Preview.
 
